@@ -14,11 +14,10 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 bg-gray-50">
-      <div
-        className="w-full max-w-md bg-white rounded-3xl shadow-lg p-6 sm:p-12"
-        style={{ paddingTop: "24%", paddingBottom: "24%" }}
-      >
-        <PomodoroTimer taskName={currentTask} onTaskSubmit={handleTaskSubmit} onTimerStateChange={setIsTimerActive} />
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div className="p-6 sm:p-12" style={{ paddingTop: "24%", paddingBottom: "24%" }}>
+          <PomodoroTimer taskName={currentTask} onTaskSubmit={handleTaskSubmit} onTimerStateChange={setIsTimerActive} />
+        </div>
       </div>
       <Toaster />
     </main>

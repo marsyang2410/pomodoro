@@ -33,6 +33,7 @@ export const PomodoroTimer: React.FC<PomodoroTimerProps> = ({ taskName, onTaskSu
         title: "Time's up!",
         description: `Completed task: ${taskName}`,
         duration: 3000,
+        className: "bg-green-50 border-green-200 text-green-800",
       })
     }
 
@@ -67,6 +68,7 @@ export const PomodoroTimer: React.FC<PomodoroTimerProps> = ({ taskName, onTaskSu
     setIsActive(false)
     onTimerStateChange(false)
     setTime(25 * 60)
+    onTaskSubmit("") // Clear the task input
   }
 
   const formatTime = (seconds: number) => {
@@ -107,4 +109,3 @@ export const PomodoroTimer: React.FC<PomodoroTimerProps> = ({ taskName, onTaskSu
     </div>
   )
 }
-
